@@ -42,10 +42,10 @@ const areas = [
 
 export default function AreasOfActivity() {
     return (
-        <section className="bg-[#B29671] py-16 lg:py-24" id="areas">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#B29671] py-10 sm:py-12 md:py-16 lg:py-24" id="areas">
+            <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Main Title */}
-                <div className="flex items-center justify-center mb-6 sm:mb-8 lg:mb-[32px]">
+                <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
                     {/* Left Arrow */}
                     <div className="hidden sm:flex w-[50px] sm:w-[80px] lg:w-[100px] mr-4 sm:mr-8 lg:mr-[144px] items-center">
                         <Image
@@ -58,7 +58,7 @@ export default function AreasOfActivity() {
                     </div>
 
                     <h2
-                        className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[#FFFFFF] font-normal min-h-[40px] sm:min-h-[50px] lg:h-[64px] flex items-center text-center px-4"
+                        className="text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[#FFFFFF] font-normal flex items-center text-center px-2 sm:px-4"
                         style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                     >
                         ÁREAS DE ATUAÇÃO
@@ -77,20 +77,20 @@ export default function AreasOfActivity() {
                 </div>
 
                 {/* Service Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-[42px] mb-8 sm:mb-12 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-[42px] mb-6 sm:mb-8 md:mb-12 justify-items-center">
                     {areas.map((area, index) => (
                         <div
                             key={index}
-                            className="w-full max-w-[371px] min-h-[180px] sm:min-h-[220px] lg:h-[278px] bg-[#B29671] border border-[#FAE8D4] rounded-lg p-4 sm:p-5 lg:p-6 flex flex-col"
+                            className="w-full max-w-[371px] min-h-[160px] sm:min-h-[180px] md:min-h-[220px] lg:h-[278px] bg-[#B29671] border border-[#FAE8D4] rounded-lg p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col"
                         >
                             <h3
-                                className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#1E1919] font-normal mb-2 sm:mb-3 lg:mb-[12px] flex items-center"
+                                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#1E1919] font-normal mb-1.5 sm:mb-2 md:mb-3 lg:mb-[12px] flex items-center"
                                 style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                             >
                                 {area.title}
                             </h3>
                             <p
-                                className="text-xs sm:text-sm lg:text-base text-[#FFFFFF] font-normal leading-relaxed flex-1"
+                                className="text-[11px] sm:text-xs md:text-sm lg:text-base text-[#FFFFFF] font-normal leading-relaxed flex-1"
                                 style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                             >
                                 {area.description}
@@ -105,7 +105,7 @@ export default function AreasOfActivity() {
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-md bg-[#FFFFFF] px-6 sm:px-8 py-3 text-xs sm:text-sm lg:text-base font-normal text-[#A87246] border border-[#b29671] whitespace-nowrap min-h-[44px] transition-opacity hover:opacity-90 active:opacity-75"
+                        className="inline-flex items-center justify-center rounded-md bg-[#FFFFFF] px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 text-[11px] sm:text-xs md:text-sm lg:text-base font-normal text-[#A87246] border border-[#b29671] whitespace-nowrap min-h-[40px] sm:min-h-[44px] transition-opacity hover:opacity-90 active:opacity-75"
                         style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                     >
                         ENTRE EM CONTATO

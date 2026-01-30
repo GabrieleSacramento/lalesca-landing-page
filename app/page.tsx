@@ -3,6 +3,7 @@ import Qualifications from './components/Qualifications';
 import AreasOfActivity from './components/AreasOfActivity';
 import Biography from './components/Biography';
 import LandmarkCases from './components/LandmarkCases';
+import Differentials from './components/Differentials';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <AreasOfActivity />
         <Biography />
         <LandmarkCases />
+        <Differentials />
       </main>
     </div>
   );

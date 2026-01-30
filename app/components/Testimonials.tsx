@@ -30,7 +30,7 @@ export default function Testimonials() {
                             href={whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center rounded-md bg-[#B29671] px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm lg:text-base font-normal text-white whitespace-nowrap mb-3 sm:mb-4"
+                            className="inline-flex items-center justify-center rounded-md bg-[#B29671] px-6 sm:px-8 py-3 sm:py-2.5 text-xs sm:text-sm lg:text-base font-normal text-white whitespace-nowrap mb-3 sm:mb-4 min-h-[44px] sm:min-h-0 transition-opacity hover:opacity-90 active:opacity-75"
                             style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                         >
                             ENTRE EM CONTATO

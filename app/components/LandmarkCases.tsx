@@ -62,8 +62,9 @@ export default function LandmarkCases() {
                                     alt={`Caso ${index + 1}`}
                                     fill
                                     className="object-cover object-center"
-                                    quality={90}
+                                    quality={75}
                                     sizes="(max-width: 768px) 100vw, 334px"
+                                    loading="lazy"
                                 />
                             </div>
 

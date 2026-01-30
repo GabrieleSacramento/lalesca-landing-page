@@ -77,14 +77,14 @@ export default function AreasOfActivity() {
                 </div>
 
                 {/* Service Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-[42px] mb-8 sm:mb-12 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-[42px] mb-8 sm:mb-12 justify-items-center">
                     {areas.map((area, index) => (
                         <div
                             key={index}
-                            className="w-full max-w-[371px] min-h-[200px] sm:min-h-[250px] lg:h-[278px] bg-[#B29671] border border-[#FAE8D4] rounded-lg p-4 sm:p-6 flex flex-col"
+                            className="w-full max-w-[371px] min-h-[180px] sm:min-h-[220px] lg:h-[278px] bg-[#B29671] border border-[#FAE8D4] rounded-lg p-4 sm:p-5 lg:p-6 flex flex-col"
                         >
                             <h3
-                                className="text-base sm:text-lg lg:text-xl text-[#1E1919] font-normal mb-2 sm:mb-3 lg:mb-[12px] min-h-[28px] sm:min-h-[32px] flex items-center"
+                                className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#1E1919] font-normal mb-2 sm:mb-3 lg:mb-[12px] flex items-center"
                                 style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                             >
                                 {area.title}
@@ -105,7 +105,7 @@ export default function AreasOfActivity() {
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-md bg-[#FFFFFF] px-8 py-3 text-sm lg:text-base font-normal text-[#A87246] border border-[#b29671] whitespace-nowrap"
+                        className="inline-flex items-center justify-center rounded-md bg-[#FFFFFF] px-6 sm:px-8 py-3 text-xs sm:text-sm lg:text-base font-normal text-[#A87246] border border-[#b29671] whitespace-nowrap min-h-[44px] transition-opacity hover:opacity-90 active:opacity-75"
                         style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                     >
                         ENTRE EM CONTATO

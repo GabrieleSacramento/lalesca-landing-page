@@ -36,6 +36,8 @@ export default function Qualifications() {
                                         alt={qualification.institution}
                                         fill
                                         className="object-contain"
+                                        quality={75}
+                                        loading="lazy"
                                     />
                                 </div>
                             </div>

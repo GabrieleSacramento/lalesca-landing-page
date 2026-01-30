@@ -45,9 +45,9 @@ export default function AreasOfActivity() {
         <section className="bg-[#B29671] py-16 lg:py-24" id="areas">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Main Title */}
-                <div className="flex items-center justify-center mb-[32px]">
+                <div className="flex items-center justify-center mb-6 sm:mb-8 lg:mb-[32px]">
                     {/* Left Arrow */}
-                    <div className="w-[100px] mr-[144px] flex items-center">
+                    <div className="hidden sm:flex w-[50px] sm:w-[80px] lg:w-[100px] mr-4 sm:mr-8 lg:mr-[144px] items-center">
                         <Image
                             src="/arrow-left.svg"
                             alt=""
@@ -58,14 +58,14 @@ export default function AreasOfActivity() {
                     </div>
 
                     <h2
-                        className="h-[64px] flex items-center text-3xl lg:text-4xl xl:text-5xl text-[#FFFFFF] font-normal"
+                        className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[#FFFFFF] font-normal min-h-[40px] sm:min-h-[50px] lg:h-[64px] flex items-center text-center px-4"
                         style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                     >
                         ÁREAS DE ATUAÇÃO
                     </h2>
 
                     {/* Right Arrow */}
-                    <div className="w-[100px] ml-[144px] flex items-center">
+                    <div className="hidden sm:flex w-[50px] sm:w-[80px] lg:w-[100px] ml-4 sm:ml-8 lg:ml-[144px] items-center">
                         <Image
                             src="/arrow-rigth.svg"
                             alt=""
@@ -77,20 +77,20 @@ export default function AreasOfActivity() {
                 </div>
 
                 {/* Service Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[42px] mb-12 justify-items-center lg:justify-items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-[42px] mb-8 sm:mb-12 justify-items-center">
                     {areas.map((area, index) => (
                         <div
                             key={index}
-                            className="w-full max-w-[371px] h-[278px] bg-[#B29671] border border-[#FAE8D4] rounded-lg p-6 flex flex-col"
+                            className="w-full max-w-[371px] min-h-[200px] sm:min-h-[250px] lg:h-[278px] bg-[#B29671] border border-[#FAE8D4] rounded-lg p-4 sm:p-6 flex flex-col"
                         >
                             <h3
-                                className="h-[32px] text-lg lg:text-xl text-[#1E1919] font-normal mb-[12px] flex items-center"
+                                className="text-base sm:text-lg lg:text-xl text-[#1E1919] font-normal mb-2 sm:mb-3 lg:mb-[12px] min-h-[28px] sm:min-h-[32px] flex items-center"
                                 style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                             >
                                 {area.title}
                             </h3>
                             <p
-                                className="h-[24px] text-sm lg:text-base text-[#FFFFFF] font-normal"
+                                className="text-xs sm:text-sm lg:text-base text-[#FFFFFF] font-normal leading-relaxed flex-1"
                                 style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                             >
                                 {area.description}

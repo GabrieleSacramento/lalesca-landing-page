@@ -86,13 +86,20 @@ export default function Hero() {
                             >
                                 ENTRE EM CONTATO
                             </a>
-                            <Link
+                            <a
                                 href="#areas"
-                                className="inline-flex items-center justify-center rounded-md bg-[#fae8d4] px-6 py-2 text-sm font-normal text-[#a87246] border border-[#a87246] whitespace-nowrap"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    const element = document.getElementById('areas');
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }
+                                }}
+                                className="inline-flex items-center justify-center rounded-md bg-[#fae8d4] px-6 py-2 text-sm font-normal text-[#a87246] border border-[#a87246] whitespace-nowrap cursor-pointer"
                                 style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
                             >
                                 NOSSOS SERVIÇOS
-                            </Link>
+                            </a>
                         </div>
                     </div>
 

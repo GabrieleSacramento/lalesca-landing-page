@@ -1,5 +1,7 @@
 import Hero from './components/Hero';
 import Qualifications from './components/Qualifications';
+import AreasOfActivity from './components/AreasOfActivity';
+import Biography from './components/Biography';
 
 export default function Home() {
   return (
@@ -7,6 +9,8 @@ export default function Home() {
       <main>
         <Hero />
         <Qualifications />
+        <AreasOfActivity />
+        <Biography />
       </main>
     </div>
   );

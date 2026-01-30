@@ -5,6 +5,7 @@ import Biography from './components/Biography';
 import LandmarkCases from './components/LandmarkCases';
 import Differentials from './components/Differentials';
 import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <LandmarkCases />
         <Differentials />
         <Testimonials />
+        <Contact />
       </main>
     </div>
   );

@@ -4,6 +4,7 @@ import AreasOfActivity from './components/AreasOfActivity';
 import Biography from './components/Biography';
 import LandmarkCases from './components/LandmarkCases';
 import Differentials from './components/Differentials';
+import Testimonials from './components/Testimonials';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Biography />
         <LandmarkCases />
         <Differentials />
+        <Testimonials />
       </main>
     </div>
   );

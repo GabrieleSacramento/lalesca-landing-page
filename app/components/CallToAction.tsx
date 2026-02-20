@@ -6,7 +6,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(w
 
 export default function CallToAction() {
     return (
-        <section className="bg-[#FFFFFF] py-8 lg:py-[64px]">
+        <section className="bg-[#FFFFFF] pt-4 pb-8 lg:py-[64px]">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 <div className="flex flex-col items-center text-center">
                     {/* WhatsApp Icon */}

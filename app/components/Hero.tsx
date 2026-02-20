@@ -10,8 +10,8 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(w
 export default function Hero() {
     return (
         <section className="relative min-h-screen lg:h-screen flex flex-col lg:flex-row items-center overflow-hidden bg-[#FFFFFF]">
-            {/* Mobile: Portrait Image at Top */}
-            <div className="lg:hidden relative w-full h-[400px] sm:h-[450px]">
+            {/* Mobile: Portrait Image as Background */}
+            <div className="lg:hidden relative w-full min-h-screen">
                 <Image
                     src="/lalesca-mobile.png"
                     alt="Lalesca Moreira"
@@ -22,6 +22,60 @@ export default function Hero() {
                     sizes="100vw"
                     loading="eager"
                 />
+
+                {/* Mobile Content - Overlay on Image */}
+                <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-8 bg-gradient-to-b from-transparent via-transparent to-[#e8d4b8]">
+                    {/* Professional Title */}
+                    <p
+                        className="text-white uppercase tracking-wide mb-4 leading-tight"
+                        style={{
+                            fontFamily: 'var(--font-archivo), sans-serif',
+                            fontSize: 'clamp(10px, 2vw, 14px)',
+                            textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
+                        }}
+                    >
+                        ADVOGADA ESPECIALISTA EM DIREITO PENAL
+                    </p>
+
+                    {/* Main Name - Image */}
+                    <div className="relative w-full max-w-md h-[120px] sm:h-[150px] mb-4">
+                        <Image
+                            src="/lawyer-name.png"
+                            alt="Lalesca Moreira"
+                            fill
+                            className="object-contain object-center"
+                            quality={75}
+                            sizes="(max-width: 640px) 100vw, 512px"
+                            loading="eager"
+                        />
+                    </div>
+
+                    {/* Biography */}
+                    <p
+                        className="text-[#808080] leading-relaxed max-w-lg mb-6"
+                        style={{
+                            fontFamily: 'var(--font-archivo), sans-serif',
+                            fontSize: 'clamp(12px, 2vw, 16px)'
+                        }}
+                    >
+                        Me apaixonei pelo direito em um cursinho preparatório para as carreiras policiais. Quando estudando as disciplinas de direito penal e direito constitucional eu vi que nasci para atuar na defesa e não no ataque.
+                    </p>
+
+                    {/* CTA Button */}
+                    <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-md bg-[#BF9874] px-8 py-3 text-white whitespace-nowrap transition-opacity hover:opacity-90 active:opacity-75"
+                        style={{
+                            fontFamily: 'var(--font-archivo), sans-serif',
+                            fontSize: 'clamp(14px, 2vw, 18px)',
+                            fontWeight: 500
+                        }}
+                    >
+                        ENTRE EM CONTATO
+                    </a>
+                </div>
             </div>
 
             {/* Desktop: Background Portrait Image */}
@@ -36,60 +90,6 @@ export default function Hero() {
                     sizes="100vw"
                     loading="eager"
                 />
-            </div>
-
-            {/* Mobile Content - Centered Below Image */}
-            <div className="lg:hidden w-full flex flex-col items-center text-center px-4 py-8 bg-gradient-to-b from-[#f5e6d3] to-[#e8d4b8]">
-                {/* Professional Title */}
-                <p
-                    className="text-white uppercase tracking-wide mb-4 leading-tight"
-                    style={{
-                        fontFamily: 'var(--font-archivo), sans-serif',
-                        fontSize: 'clamp(10px, 2vw, 14px)',
-                        textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
-                    }}
-                >
-                    ADVOGADA ESPECIALISTA EM DIREITO PENAL
-                </p>
-
-                {/* Main Name - Image */}
-                <div className="relative w-full max-w-md h-[120px] sm:h-[150px] mb-4">
-                    <Image
-                        src="/lawyer-name.png"
-                        alt="Lalesca Moreira"
-                        fill
-                        className="object-contain object-center"
-                        quality={75}
-                        sizes="(max-width: 640px) 100vw, 512px"
-                        loading="eager"
-                    />
-                </div>
-
-                {/* Biography */}
-                <p
-                    className="text-[#808080] leading-relaxed max-w-lg mb-6"
-                    style={{
-                        fontFamily: 'var(--font-archivo), sans-serif',
-                        fontSize: 'clamp(12px, 2vw, 16px)'
-                    }}
-                >
-                    Me apaixonei pelo direito em um cursinho preparatório para as carreiras policiais. Quando estudando as disciplinas de direito penal e direito constitucional eu vi que nasci para atuar na defesa e não no ataque.
-                </p>
-
-                {/* CTA Button */}
-                <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-[#BF9874] px-8 py-3 text-white whitespace-nowrap transition-opacity hover:opacity-90 active:opacity-75"
-                    style={{
-                        fontFamily: 'var(--font-archivo), sans-serif',
-                        fontSize: 'clamp(14px, 2vw, 18px)',
-                        fontWeight: 500
-                    }}
-                >
-                    ENTRE EM CONTATO
-                </a>
             </div>
 
             {/* Desktop Content Overlay */}

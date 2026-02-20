@@ -6,11 +6,11 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(w
 
 export default function Biography() {
     return (
-        <section className="bg-[#B29671] min-h-[827px] lg:h-[827px] flex items-end py-8 lg:py-[0px]" id="sobre">
+        <section className="bg-[#B29671] min-h-[827px] lg:h-[827px] flex items-end pt-8 pb-0 lg:py-[0px]" id="sobre">
             <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                     {/* Left Side - Portrait */}
-                    <div className="flex justify-center lg:justify-start items-end order-2 lg:order-1">
+                    <div className="flex justify-center lg:justify-start items-end order-2 lg:order-1 pb-0 lg:pb-0">
                         <div className="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] lg:w-[600px] h-[420px] sm:h-[540px] md:h-[660px] lg:h-[900px] flex items-end">
                             <Image
                                 src="/biography-photo.png"

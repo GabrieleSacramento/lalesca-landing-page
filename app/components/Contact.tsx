@@ -6,11 +6,11 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(w
 
 export default function Contact() {
     return (
-        <section className="bg-[#FFFFFF] min-h-[796px] lg:h-[796px] flex items-center py-8 lg:py-[64px]" id="contato">
-            <div className="mx-auto max-w-7xl w-full px-3 sm:px-4 md:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start lg:items-center">
+        <section className="bg-[#FFFFFF] min-h-[796px] lg:h-[796px] flex items-center pt-4 pb-8 lg:py-[64px]" id="contato">
+            <div className="mx-auto max-w-7xl w-full px-4 sm:px-4 md:px-6 lg:px-8">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start lg:items-center">
                     {/* Left Side - All Content */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col order-2 lg:order-1">
                         {/* Heading */}
                         <h2
                             className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#B29671] font-normal mb-4 sm:mb-6 md:mb-8"
@@ -72,8 +72,8 @@ export default function Contact() {
                     </div>
 
                     {/* Right Side - Map */}
-                    <div className="w-full h-full order-first lg:order-last">
-                        <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[600px] rounded-lg overflow-hidden">
+                    <div className="w-full h-full order-1 lg:order-last">
+                        <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[600px] rounded-lg overflow-hidden">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5!2d-38.4!3d-13.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716037ca23ca5b5%3A0x0!2zQ2FtaW5obyBkYXMgw6Fydm9yZXMsIFNhbHZhZG9yIC0gQkEsIDQxODIwLTc3MA!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
                                 width="100%"

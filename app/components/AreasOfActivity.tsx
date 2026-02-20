@@ -44,7 +44,7 @@ const areas = [
 
 export default function AreasOfActivity() {
     return (
-        <section className="bg-[#FFFFFF] py-8 lg:py-[64px]" id="areas">
+        <section className="bg-[#FFFFFF] pb-4 pt-8 lg:py-[64px]" id="areas">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Main Title */}
                 <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
@@ -119,7 +119,7 @@ export default function AreasOfActivity() {
                                 className="text-[#808080] font-normal flex-1"
                                 style={{
                                     fontFamily: 'var(--font-abel), sans-serif',
-                                    fontSize: 'clamp(12px, 2vw, 24px)',
+                                    fontSize: 'clamp(13px, 2vw, 24px)',
                                     lineHeight: '29px'
                                 }}
                             >

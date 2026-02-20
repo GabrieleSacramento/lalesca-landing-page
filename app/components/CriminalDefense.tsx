@@ -60,7 +60,7 @@ export default function CriminalDefense() {
 
     return (
         <section className="bg-[#FFFFFF] py-8 lg:py-[64px]">
-            <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 sm:px-4 md:px-6 lg:px-8">
                 {/* Title */}
                 <h2
                     className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-[#B29671] font-normal text-center mb-6 sm:mb-8 lg:mb-[46px]"

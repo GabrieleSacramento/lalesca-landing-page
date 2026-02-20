@@ -17,8 +17,8 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="bg-[#FFFFFF] py-8 lg:py-[64px]">
-            <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
+        <section className="bg-[#FFFFFF] pt-4 pb-8 lg:py-[64px]">
+            <div className="mx-auto max-w-7xl px-4 sm:px-4 md:px-6 lg:px-8">
                 {/* Top Section - Call to Action */}
                 <div className="mb-12 sm:mb-16 lg:mb-24">
                     <div className="bg-[#FFFFFF] rounded-lg p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto text-center">

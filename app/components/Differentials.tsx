@@ -70,7 +70,7 @@ export default function Differentials() {
                 className="text-[#808080] font-normal flex-1"
                 style={{
                   fontFamily: 'var(--font-abel), sans-serif',
-                  fontSize: 'clamp(12px, 2vw, 24px)',
+                  fontSize: 'clamp(13px, 2vw, 24px)',
                   lineHeight: '29px'
                 }}
               >

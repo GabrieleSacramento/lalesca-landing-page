@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -43,6 +44,52 @@ const areas = [
 ];
 
 export default function AreasOfActivity() {
+    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+        const observers = cardRefs.current.map((card) => {
+            if (!card) return null;
+
+            // Check if element is already visible (for desktop)
+            const rect = card.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+                // Add animation class immediately if already visible
+                setTimeout(() => {
+                    card.classList.add('animate-slide-in-right');
+                }, 100);
+                return null;
+            }
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-slide-in-right');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                }
+            );
+
+            observer.observe(card);
+            return observer;
+        });
+
+        return () => {
+            observers.forEach((observer) => {
+                if (observer) {
+                    observer.disconnect();
+                }
+            });
+        };
+    }, []);
+
     return (
         <section className="bg-[#FFFFFF] pb-4 pt-8 lg:py-[64px]" id="areas">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
@@ -96,12 +143,14 @@ export default function AreasOfActivity() {
                     {areas.map((area, index) => (
                         <div
                             key={index}
-                            className="w-full max-w-[371px] min-h-[160px] sm:min-h-[180px] md:min-h-[220px] lg:h-[278px] bg-[#FFFFFF] p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col animate-slide-in-right"
+                            ref={(el) => { cardRefs.current[index] = el; }}
+                            className="w-full max-w-[371px] min-h-[160px] sm:min-h-[180px] md:min-h-[220px] lg:h-[278px] bg-[#FFFFFF] p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col"
                             style={{
                                 animationDelay: `${index * 0.1}s`,
                                 animationFillMode: 'both',
                                 borderRadius: '0',
-                                boxShadow: '-4px 4px 4px rgba(0, 0, 0, 0.1)'
+                                boxShadow: '-4px 4px 4px rgba(0, 0, 0, 0.1)',
+                                opacity: 0
                             }}
                         >
                             <h3

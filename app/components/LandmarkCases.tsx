@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const cases = [
@@ -18,6 +19,52 @@ const cases = [
 ];
 
 export default function LandmarkCases() {
+    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+        const observers = cardRefs.current.map((card) => {
+            if (!card) return null;
+
+            // Check if element is already visible (for desktop)
+            const rect = card.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+                // Add animation class immediately if already visible
+                setTimeout(() => {
+                    card.classList.add('animate-slide-in-right');
+                }, 100);
+                return null;
+            }
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-slide-in-right');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                }
+            );
+
+            observer.observe(card);
+            return observer;
+        });
+
+        return () => {
+            observers.forEach((observer) => {
+                if (observer) {
+                    observer.disconnect();
+                }
+            });
+        };
+    }, []);
+
     return (
         <section className="bg-[#FFFFFF] pb-4 pt-8 lg:py-[64px]" id="casos">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
@@ -69,10 +116,16 @@ export default function LandmarkCases() {
                 {/* Cases Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-[42px] justify-items-center">
                     {cases.map((caseItem, index) => (
-                        <div key={index} className="flex flex-col w-full max-w-[334px] animate-slide-in-right" style={{
-                            animationDelay: `${index * 0.1}s`,
-                            animationFillMode: 'both'
-                        }}>
+                        <div
+                            key={index}
+                            ref={(el) => { cardRefs.current[index] = el; }}
+                            className="flex flex-col w-full max-w-[334px]"
+                            style={{
+                                animationDelay: `${index * 0.1}s`,
+                                animationFillMode: 'both',
+                                opacity: 0
+                            }}
+                        >
                             {/* Interview Image */}
                             <div className="relative w-full aspect-[334/184]" style={{
                                 borderRadius: '0',

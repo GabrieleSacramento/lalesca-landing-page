@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
 const differentials = [
   {
     title: 'Transparência',
@@ -24,6 +26,52 @@ const differentials = [
 ];
 
 export default function Differentials() {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers = cardRefs.current.map((card) => {
+      if (!card) return null;
+
+      // Check if element is already visible (for desktop)
+      const rect = card.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (isVisible) {
+        // Add animation class immediately if already visible
+        setTimeout(() => {
+          card.classList.add('animate-slide-in-right');
+        }, 100);
+        return null;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-slide-in-right');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        }
+      );
+
+      observer.observe(card);
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer) => {
+        if (observer) {
+          observer.disconnect();
+        }
+      });
+    };
+  }, []);
+
   return (
     <section className="bg-[#FFFFFF] py-8 lg:py-[64px]" id="diferenciais">
       <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
@@ -46,12 +94,14 @@ export default function Differentials() {
           {differentials.map((differential, index) => (
             <div
               key={index}
-              className={`w-full max-w-[550px] min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] bg-[#FFFFFF] p-4 sm:p-5 md:p-6 lg:p-8 flex flex-col animate-slide-in-right`}
+              ref={(el) => { cardRefs.current[index] = el; }}
+              className={`w-full max-w-[550px] min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] bg-[#FFFFFF] p-4 sm:p-5 md:p-6 lg:p-8 flex flex-col`}
               style={{
                 animationDelay: `${index * 0.1}s`,
                 animationFillMode: 'both',
                 borderRadius: '0',
-                boxShadow: '-4px 4px 4px rgba(178, 150, 113, 0.1)'
+                boxShadow: '-4px 4px 4px rgba(178, 150, 113, 0.1)',
+                opacity: 0
               }}
             >
               <h3

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const whatsappNumber = '5571993072172';
-const whatsappMessage = 'Olá, gostaria de agendar uma consulta.';
+const whatsappMessage = 'Estou vindo da sua landing page, quenga';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export default function CallToAction() {

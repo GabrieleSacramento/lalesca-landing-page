@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const whatsappNumber = '5571993072172';
-const whatsappMessage = 'Olá, gostaria de agendar uma consulta.';
+const whatsappMessage = 'Estou vindo da sua landing page, quenga';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 const testimonials = [
@@ -17,7 +17,7 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="bg-[#FFFFFF] pt-4 pb-8 lg:py-[64px]">
+        <section className="bg-[#FFFFFF] pt-4 pb-4 lg:py-[64px]">
             <div className="mx-auto max-w-7xl px-4 sm:px-4 md:px-6 lg:px-8">
                 {/* Top Section - Call to Action */}
                 <div className="mb-12 sm:mb-16 lg:mb-24">
@@ -56,7 +56,7 @@ export default function Testimonials() {
                         <h3
                             className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-[#B29671] font-normal leading-tight mb-4"
                             style={{
-                                fontFamily: 'var(--font-marcellus), serif',
+                                fontFamily: 'var(--font-abel), sans-serif',
                                 fontSize: 'clamp(18px, 3vw, 48px)'
                             }}
                         >

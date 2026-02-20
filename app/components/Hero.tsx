@@ -52,7 +52,7 @@ export default function Hero() {
 
                     {/* Biography */}
                     <p
-                        className="text-[#808080] leading-relaxed max-w-lg mb-6"
+                        className="text-[#FFFFFF] leading-relaxed max-w-lg mb-6"
                         style={{
                             fontFamily: 'var(--font-archivo), sans-serif',
                             fontSize: 'clamp(12px, 2vw, 16px)'

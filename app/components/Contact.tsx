@@ -6,7 +6,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(w
 
 export default function Contact() {
     return (
-        <section className="bg-[#FFFFFF] min-h-[796px] lg:h-[796px] flex items-center pt-4 pb-[32px] lg:py-[64px]" id="contato">
+        <section className="bg-[#FFFFFF] min-h-[796px] lg:h-[796px] flex items-center pt-[16px] pb-[32px] lg:py-[64px]" id="contato">
             <div className="mx-auto max-w-7xl w-full px-4 sm:px-4 md:px-6 lg:px-8">
                 <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center lg:items-center">
                     {/* Left Side - All Content */}

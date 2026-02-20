@@ -1,17 +1,27 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 const whatsappNumber = '5571993072172';
 const whatsappMessage = 'Estou vindo da sua landing page, quenga';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
+const handleScrollToAreas = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('areas');
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
 export default function Hero() {
     return (
-        <section className="relative min-h-screen lg:h-screen flex flex-col lg:flex-row items-center overflow-hidden bg-[#FFFFFF]">
-            {/* Mobile: Portrait Image as Background */}
+        <section className="relative min-h-screen lg:h-screen flex flex-col lg:flex-row items-center overflow-visible bg-[#FFFFFF]">
+            {/* ============================================ */}
+            {/* MOBILE VERSION */}
+            {/* ============================================ */}
             <div className="lg:hidden relative w-full min-h-screen">
+                {/* Background Image */}
                 <Image
                     src="/lalesca-mobile.png"
                     alt="Lalesca Moreira"
@@ -23,7 +33,7 @@ export default function Hero() {
                     loading="eager"
                 />
 
-                {/* Mobile Content - Overlay on Image */}
+                {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-8 bg-gradient-to-b from-transparent via-transparent to-[#e8d4b8]">
                     {/* Professional Title */}
                     <p
@@ -37,7 +47,7 @@ export default function Hero() {
                         ADVOGADA ESPECIALISTA EM DIREITO PENAL
                     </p>
 
-                    {/* Main Name - Image */}
+                    {/* Name Logo */}
                     <div className="relative w-full max-w-md h-[120px] sm:h-[150px] mb-4">
                         <Image
                             src="/lawyer-name.png"
@@ -78,7 +88,11 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Desktop: Background Portrait Image */}
+            {/* ============================================ */}
+            {/* DESKTOP VERSION */}
+            {/* ============================================ */}
+
+            {/* Background Portrait Image */}
             <div className="hidden lg:block absolute inset-0 z-0">
                 <Image
                     src="/lalesca-portrait.png"
@@ -92,64 +106,51 @@ export default function Hero() {
                 />
             </div>
 
-            {/* Desktop Content Overlay */}
-            <div className="hidden lg:block relative z-10 w-full h-full flex items-center px-12 py-20">
+            {/* Content Container */}
+            <div className="hidden lg:block relative z-10 w-full h-full flex items-center px-12 py-8">
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-0 items-center h-full">
-                    {/* Text Content */}
-                    <div className="w-full max-w-none text-left flex flex-col justify-center h-full">
+                    {/* Left Side - Text Content */}
+                    <div className="w-full max-w-none text-left flex flex-col justify-start">
                         {/* Professional Title */}
                         <p
-                            className="text-xs sm:text-sm text-[#b29671] uppercase tracking-wide mb-[22px] leading-tight"
+                            className="text-xs sm:text-sm text-[#b29671] uppercase tracking-wide leading-none mt-8 mb-0"
                             style={{
                                 fontFamily: 'var(--font-archivo), sans-serif',
-                                fontSize: 'clamp(9px, 1.5vw, 14px)'
+                                fontSize: 'clamp(9px, 1.5vw, 14px)',
+                                lineHeight: '1.2'
                             }}
                         >
                             ADVOGADA ESPECIALISTA EM DIREITO PENAL
                         </p>
 
-                        {/* Main Name */}
-                        <h1
-                            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-none mb-[22px]"
-                            style={{
-                                fontFamily: 'var(--font-abel), sans-serif',
-                                filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8))',
-                                WebkitFilter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8))',
-                                letterSpacing: '0.05em',
-                                color: '#FFFFFF',
-                                fontSize: 'clamp(20px, 4vw, 80px)'
-                            }}
-                        >
-                            LALESCA MOREIRA
-                        </h1>
+                        {/* Name Logo */}
+                        <div className="relative w-full h-[200px] opacity-100 -mt-.5">
+                            <Image
+                                src="/lalesca-logo-1.png"
+                                alt="Lalesca Moreira"
+                                fill
+                                className="object-contain object-left"
+                                quality={60}
+                                loading="lazy"
+                            />
+                        </div>
 
                         {/* Biography */}
-                        <div className="relative mb-[140px]">
+                        <div>
                             <p
-                                className="text-sm sm:text-base text-white leading-relaxed max-w-[90%] relative z-10 drop-shadow-lg"
+                                className="text-sm sm:text-base text-white leading-tight max-w-[90%] drop-shadow-lg"
                                 style={{
                                     fontFamily: 'var(--font-archivo), sans-serif',
-                                    fontSize: 'clamp(11px, 1.5vw, 16px)'
+                                    fontSize: 'clamp(11px, 1.5vw, 16px)',
+                                    lineHeight: '1.3'
                                 }}
                             >
                                 Me apaixonei pelo direito em um cursinho preparatório para as carreiras policiais. Quando estudando as disciplinas de direito penal e direito constitucional eu vi que nasci para atuar na defesa e não no ataque.
                             </p>
-
-                            {/* Lawyer name image between Biography and CTA Buttons - Desktop only */}
-                            <div className="absolute top-full left-0 w-full h-[209px] opacity-50 z-0">
-                                <Image
-                                    src="/lawyer-name.png"
-                                    alt=""
-                                    fill
-                                    className="object-contain object-left"
-                                    quality={60}
-                                    loading="lazy"
-                                />
-                            </div>
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-[54px] relative z-10">
+                        <div className="flex flex-col sm:flex-row gap-2 mt-8">
                             <a
                                 href={whatsappUrl}
                                 target="_blank"
@@ -164,13 +165,7 @@ export default function Hero() {
                             </a>
                             <a
                                 href="#areas"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    const element = document.getElementById('areas');
-                                    if (element) {
-                                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    }
-                                }}
+                                onClick={handleScrollToAreas}
                                 className="inline-flex items-center justify-center rounded-md bg-[#fae8d4] px-6 py-2.5 text-sm font-normal text-[#a87246] border border-[#a87246] whitespace-nowrap cursor-pointer transition-opacity hover:opacity-90 active:opacity-75"
                                 style={{
                                     fontFamily: 'var(--font-archivo), sans-serif',
@@ -182,7 +177,7 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    {/* Right Side - Empty, portrait is visible in background (Desktop only) */}
+                    {/* Right Side - Empty (portrait visible in background) */}
                     <div className="hidden lg:block" />
                 </div>
             </div>

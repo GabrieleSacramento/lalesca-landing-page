@@ -59,14 +59,14 @@ export default function CriminalDefense() {
     const descriptionParts = renderDescription(description);
 
     return (
-        <section className="bg-[#FFFFFF] py-[64px]">
+        <section className="bg-[#FFFFFF] py-8 lg:py-[64px]">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Title */}
                 <h2
                     className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-[#B29671] font-normal text-center mb-6 sm:mb-8 lg:mb-[46px]"
                     style={{ 
                         fontFamily: 'var(--font-abel), sans-serif',
-                        fontSize: 'clamp(24px, 5vw, 64px)'
+                        fontSize: 'clamp(18px, 5vw, 64px)'
                     }}
                 >
                     Defesa Criminal Estratégica e<br className="hidden sm:block" />
@@ -78,7 +78,7 @@ export default function CriminalDefense() {
                     className="text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl text-[#808080] font-normal leading-relaxed text-left max-w-5xl mx-auto"
                     style={{ 
                         fontFamily: 'var(--font-abel), sans-serif',
-                        fontSize: 'clamp(14px, 3vw, 36px)'
+                        fontSize: 'clamp(12px, 3vw, 36px)'
                     }}
                 >
                     {descriptionParts.map((part, index) => (

@@ -3,15 +3,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const whatsappNumber = '5511999999999'; // Replace with actual WhatsApp number
+const whatsappNumber = '5571993072172';
 const whatsappMessage = 'Olá, gostaria de agendar uma consulta.';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen lg:h-screen flex items-center overflow-hidden bg-[#FFFFFF]">
+        <section className="relative min-h-screen lg:h-screen flex flex-col lg:flex-row items-center overflow-hidden bg-[#FFFFFF]">
             {/* Mobile: Portrait Image at Top */}
-            <div className="lg:hidden relative w-full h-[400px]">
+            <div className="lg:hidden relative w-full h-[400px] sm:h-[450px]">
                 <Image
                     src="/lalesca-mobile.png"
                     alt="Lalesca Moreira"
@@ -38,17 +38,71 @@ export default function Hero() {
                 />
             </div>
 
-            {/* Content Overlay */}
-            <div className="relative z-10 w-full h-full flex items-center px-4 sm:px-6 lg:px-12 py-8 lg:py-20">
+            {/* Mobile Content - Centered Below Image */}
+            <div className="lg:hidden w-full flex flex-col items-center text-center px-4 py-8 bg-gradient-to-b from-[#f5e6d3] to-[#e8d4b8]">
+                {/* Professional Title */}
+                <p
+                    className="text-white uppercase tracking-wide mb-4 leading-tight"
+                    style={{
+                        fontFamily: 'var(--font-archivo), sans-serif',
+                        fontSize: 'clamp(10px, 2vw, 14px)',
+                        textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
+                    }}
+                >
+                    ADVOGADA ESPECIALISTA EM DIREITO PENAL
+                </p>
+
+                {/* Main Name - Image */}
+                <div className="relative w-full max-w-md h-[120px] sm:h-[150px] mb-4">
+                    <Image
+                        src="/lawyer-name.png"
+                        alt="Lalesca Moreira"
+                        fill
+                        className="object-contain object-center"
+                        quality={75}
+                        sizes="(max-width: 640px) 100vw, 512px"
+                        loading="eager"
+                    />
+                </div>
+
+                {/* Biography */}
+                <p
+                    className="text-[#808080] leading-relaxed max-w-lg mb-6"
+                    style={{
+                        fontFamily: 'var(--font-archivo), sans-serif',
+                        fontSize: 'clamp(12px, 2vw, 16px)'
+                    }}
+                >
+                    Me apaixonei pelo direito em um cursinho preparatório para as carreiras policiais. Quando estudando as disciplinas de direito penal e direito constitucional eu vi que nasci para atuar na defesa e não no ataque.
+                </p>
+
+                {/* CTA Button */}
+                <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md bg-[#BF9874] px-8 py-3 text-white whitespace-nowrap transition-opacity hover:opacity-90 active:opacity-75"
+                    style={{
+                        fontFamily: 'var(--font-archivo), sans-serif',
+                        fontSize: 'clamp(14px, 2vw, 18px)',
+                        fontWeight: 500
+                    }}
+                >
+                    ENTRE EM CONTATO
+                </a>
+            </div>
+
+            {/* Desktop Content Overlay */}
+            <div className="hidden lg:block relative z-10 w-full h-full flex items-center px-12 py-20">
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-0 items-center h-full">
                     {/* Text Content */}
                     <div className="w-full max-w-none text-left flex flex-col justify-center h-full">
                         {/* Professional Title */}
                         <p
-                            className="text-xs sm:text-sm text-[#b29671] uppercase tracking-wide mb-4 sm:mb-5 lg:mb-[22px] leading-tight"
+                            className="text-xs sm:text-sm text-[#b29671] uppercase tracking-wide mb-[22px] leading-tight"
                             style={{
                                 fontFamily: 'var(--font-archivo), sans-serif',
-                                fontSize: 'clamp(10px, 1.5vw, 14px)'
+                                fontSize: 'clamp(9px, 1.5vw, 14px)'
                             }}
                         >
                             ADVOGADA ESPECIALISTA EM DIREITO PENAL
@@ -56,34 +110,33 @@ export default function Hero() {
 
                         {/* Main Name */}
                         <h1
-                            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-none mb-4 sm:mb-5 lg:mb-[22px]"
+                            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-none mb-[22px]"
                             style={{
                                 fontFamily: 'var(--font-abel), sans-serif',
                                 filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8))',
                                 WebkitFilter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8))',
                                 letterSpacing: '0.05em',
-                                color: '#1E1919',
-                                fontSize: 'clamp(24px, 4vw, 80px)'
+                                color: '#FFFFFF',
+                                fontSize: 'clamp(20px, 4vw, 80px)'
                             }}
                         >
-                            <span className="lg:hidden">LALESCA MOREIRA</span>
-                            <span className="hidden lg:inline" style={{ color: '#FFFFFF' }}>LALESCA MOREIRA</span>
+                            LALESCA MOREIRA
                         </h1>
 
                         {/* Biography */}
-                        <div className="relative mb-6 sm:mb-8 lg:mb-[140px]">
+                        <div className="relative mb-[140px]">
                             <p
-                                className="text-sm sm:text-base text-[#1E1919] lg:text-white leading-relaxed max-w-full lg:max-w-[90%] relative z-10 lg:drop-shadow-lg"
+                                className="text-sm sm:text-base text-white leading-relaxed max-w-[90%] relative z-10 drop-shadow-lg"
                                 style={{
                                     fontFamily: 'var(--font-archivo), sans-serif',
-                                    fontSize: 'clamp(12px, 1.5vw, 16px)'
+                                    fontSize: 'clamp(11px, 1.5vw, 16px)'
                                 }}
                             >
                                 Me apaixonei pelo direito em um cursinho preparatório para as carreiras policiais. Quando estudando as disciplinas de direito penal e direito constitucional eu vi que nasci para atuar na defesa e não no ataque.
                             </p>
 
                             {/* Lawyer name image between Biography and CTA Buttons - Desktop only */}
-                            <div className="hidden lg:block absolute top-full left-0 w-full h-[209px] opacity-50 z-0">
+                            <div className="absolute top-full left-0 w-full h-[209px] opacity-50 z-0">
                                 <Image
                                     src="/lawyer-name.png"
                                     alt=""
@@ -96,12 +149,12 @@ export default function Hero() {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-[54px] relative z-10">
+                        <div className="flex flex-col sm:flex-row gap-[54px] relative z-10">
                             <a
                                 href={whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center rounded-md bg-[#a87246] px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-normal text-white whitespace-nowrap transition-opacity hover:opacity-90 active:opacity-75"
+                                className="inline-flex items-center justify-center rounded-md bg-[#a87246] px-6 py-2.5 text-sm font-normal text-white whitespace-nowrap transition-opacity hover:opacity-90 active:opacity-75"
                                 style={{
                                     fontFamily: 'var(--font-archivo), sans-serif',
                                     fontSize: 'clamp(12px, 1.5vw, 14px)'
@@ -118,7 +171,7 @@ export default function Hero() {
                                         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                     }
                                 }}
-                                className="inline-flex items-center justify-center rounded-md bg-[#fae8d4] px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-normal text-[#a87246] border border-[#a87246] whitespace-nowrap cursor-pointer transition-opacity hover:opacity-90 active:opacity-75"
+                                className="inline-flex items-center justify-center rounded-md bg-[#fae8d4] px-6 py-2.5 text-sm font-normal text-[#a87246] border border-[#a87246] whitespace-nowrap cursor-pointer transition-opacity hover:opacity-90 active:opacity-75"
                                 style={{
                                     fontFamily: 'var(--font-archivo), sans-serif',
                                     fontSize: 'clamp(12px, 1.5vw, 14px)'

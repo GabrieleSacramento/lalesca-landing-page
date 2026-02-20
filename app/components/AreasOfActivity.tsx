@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const whatsappNumber = '5571993072172'; // Replace with actual WhatsApp number
+const whatsappNumber = '5571993072172';
 const whatsappMessage = 'Olá, gostaria de agendar uma consulta.';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -44,7 +44,7 @@ const areas = [
 
 export default function AreasOfActivity() {
     return (
-        <section className="bg-[#FFFFFF] py-[64px]" id="areas">
+        <section className="bg-[#FFFFFF] py-8 lg:py-[64px]" id="areas">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Main Title */}
                 <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
@@ -67,9 +67,9 @@ export default function AreasOfActivity() {
                         className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
                         style={{
                             fontFamily: 'var(--font-abel), sans-serif',
-                            fontSize: 'clamp(24px, 5vw, 64px)',
+                            fontSize: 'clamp(18px, 5vw, 64px)',
                             color: '#B29671',
-                            minHeight: 'clamp(30px, 5vw, 64px)'
+                            minHeight: 'clamp(22px, 5vw, 64px)'
                         }}
                     >
                         ÁREAS DE ATUAÇÃO
@@ -108,9 +108,9 @@ export default function AreasOfActivity() {
                                 className="text-[#B29671] font-normal mb-[12px] flex items-center"
                                 style={{
                                     fontFamily: 'var(--font-archivo), sans-serif',
-                                    fontSize: 'clamp(18px, 2.5vw, 30px)',
+                                    fontSize: 'clamp(16px, 2.5vw, 30px)',
                                     lineHeight: '23px',
-                                    minHeight: 'clamp(20px, 2.5vw, 32px)'
+                                    minHeight: 'clamp(18px, 2.5vw, 32px)'
                                 }}
                             >
                                 {area.title}
@@ -119,7 +119,7 @@ export default function AreasOfActivity() {
                                 className="text-[#808080] font-normal flex-1"
                                 style={{
                                     fontFamily: 'var(--font-abel), sans-serif',
-                                    fontSize: 'clamp(14px, 2vw, 24px)',
+                                    fontSize: 'clamp(12px, 2vw, 24px)',
                                     lineHeight: '29px'
                                 }}
                             >

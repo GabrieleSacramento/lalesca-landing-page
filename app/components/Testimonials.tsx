@@ -17,14 +17,17 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="bg-[#FFFFFF] py-[64px]">
+        <section className="bg-[#FFFFFF] py-8 lg:py-[64px]">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Top Section - Call to Action */}
                 <div className="mb-12 sm:mb-16 lg:mb-24">
                     <div className="bg-[#FFFFFF] rounded-lg p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto text-center">
                         <h2
                             className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-[#1e1919] font-normal mb-4 sm:mb-6 lg:mb-8"
-                            style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                            style={{
+                                fontFamily: 'var(--font-archivo), sans-serif',
+                                fontSize: 'clamp(14px, 2vw, 30px)'
+                            }}
                         >
                             Você ou alguém próximo está sofrendo um processo criminal? Estamos prontos para atender você.
                         </h2>
@@ -52,7 +55,10 @@ export default function Testimonials() {
                     <div className="flex flex-col">
                         <h3
                             className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-[#B29671] font-normal leading-tight mb-4"
-                            style={{ fontFamily: 'var(--font-marcellus), serif' }}
+                            style={{
+                                fontFamily: 'var(--font-marcellus), serif',
+                                fontSize: 'clamp(18px, 3vw, 48px)'
+                            }}
                         >
                             FEEDBACKS
                             <br />
@@ -100,7 +106,7 @@ export default function Testimonials() {
                                     className="text-[#B29671] font-normal leading-relaxed flex-1"
                                     style={{
                                         fontFamily: 'var(--font-abel), sans-serif',
-                                        fontSize: 'clamp(14px, 2vw, 24px)',
+                                        fontSize: 'clamp(12px, 2vw, 24px)',
                                         lineHeight: '29px'
                                     }}
                                 >

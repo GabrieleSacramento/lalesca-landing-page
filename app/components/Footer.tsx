@@ -6,7 +6,10 @@ export default function Footer() {
           {/* Copyright */}
           <p
             className="text-sm sm:text-base lg:text-lg text-[#1e1919] font-normal"
-            style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+            style={{ 
+              fontFamily: 'var(--font-archivo), sans-serif',
+              fontSize: 'clamp(11px, 1.5vw, 18px)'
+            }}
           >
             © Dra. Lalesca Moreira. Todos os direitos reservados.
             <br />
@@ -16,7 +19,10 @@ export default function Footer() {
           {/* Disclaimer */}
           <p
             className="text-[10px] sm:text-xs lg:text-sm text-[#1e1919] font-normal max-w-4xl px-2"
-            style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+            style={{ 
+              fontFamily: 'var(--font-archivo), sans-serif',
+              fontSize: 'clamp(9px, 1.2vw, 14px)'
+            }}
           >
             Este site não faz parte do Google nem do Facebook ou do Facebook Inc. Além disso, não oferecemos nenhum
             tipo de serviço oficial do governo. Trabalhamos exclusivamente com serviços jurídicos.

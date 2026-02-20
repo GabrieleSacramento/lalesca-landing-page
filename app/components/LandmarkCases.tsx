@@ -19,7 +19,7 @@ const cases = [
 
 export default function LandmarkCases() {
     return (
-        <section className="bg-[#FFFFFF] py-[64px]" id="casos">
+        <section className="bg-[#FFFFFF] py-8 lg:py-[64px]" id="casos">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Main Title */}
                 <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
@@ -42,9 +42,9 @@ export default function LandmarkCases() {
                         className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
                         style={{
                             fontFamily: 'var(--font-abel), sans-serif',
-                            fontSize: 'clamp(24px, 5vw, 64px)',
+                            fontSize: 'clamp(18px, 5vw, 64px)',
                             color: '#B29671',
-                            minHeight: 'clamp(30px, 5vw, 64px)'
+                            minHeight: 'clamp(22px, 5vw, 64px)'
                         }}
                     >
                         CASOS DE REPERCUÇÃO
@@ -98,7 +98,7 @@ export default function LandmarkCases() {
                                     className="text-[#B29671] font-normal leading-relaxed"
                                     style={{
                                         fontFamily: 'var(--font-abel), sans-serif',
-                                        fontSize: 'clamp(14px, 2vw, 24px)',
+                                        fontSize: 'clamp(12px, 2vw, 24px)',
                                         lineHeight: '29px'
                                     }}
                                 >

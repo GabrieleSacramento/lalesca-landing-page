@@ -6,7 +6,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(w
 
 export default function Contact() {
     return (
-        <section className="bg-[#FFFFFF] min-h-[796px] lg:h-[796px] flex items-center py-[64px]" id="contato">
+        <section className="bg-[#FFFFFF] min-h-[796px] lg:h-[796px] flex items-center py-8 lg:py-[64px]" id="contato">
             <div className="mx-auto max-w-7xl w-full px-3 sm:px-4 md:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start lg:items-center">
                     {/* Left Side - All Content */}
@@ -14,7 +14,10 @@ export default function Contact() {
                         {/* Heading */}
                         <h2
                             className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#B29671] font-normal mb-4 sm:mb-6 md:mb-8"
-                            style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                            style={{ 
+                                fontFamily: 'var(--font-archivo), sans-serif',
+                                fontSize: 'clamp(16px, 2.5vw, 30px)'
+                            }}
                         >
                             Onde estamos
                         </h2>
@@ -28,19 +31,28 @@ export default function Contact() {
                             <div className="flex flex-col text-left">
                                 <p
                                     className="text-xs sm:text-sm md:text-base lg:text-lg text-[#1e1919] font-normal"
-                                    style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                                    style={{ 
+                                        fontFamily: 'var(--font-archivo), sans-serif',
+                                        fontSize: 'clamp(11px, 1.5vw, 18px)'
+                                    }}
                                 >
                                     Rua alceu amoroso lima, 314
                                 </p>
                                 <p
                                     className="text-xs sm:text-sm md:text-base lg:text-lg text-[#1e1919] font-normal"
-                                    style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                                    style={{ 
+                                        fontFamily: 'var(--font-archivo), sans-serif',
+                                        fontSize: 'clamp(11px, 1.5vw, 18px)'
+                                    }}
                                 >
                                     Edificio antares empresarial, sala 412
                                 </p>
                                 <p
                                     className="text-xs sm:text-sm md:text-base lg:text-lg text-[#1e1919] font-normal"
-                                    style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                                    style={{ 
+                                        fontFamily: 'var(--font-archivo), sans-serif',
+                                        fontSize: 'clamp(11px, 1.5vw, 18px)'
+                                    }}
                                 >
                                     Caminho das árvores, Salvador/Ba, CEP: 41820-770
                                 </p>

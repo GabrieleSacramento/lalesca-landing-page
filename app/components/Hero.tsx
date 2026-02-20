@@ -50,7 +50,7 @@ export default function Hero() {
                     {/* Name Logo */}
                     <div className="relative w-full max-w-md h-[120px] sm:h-[150px] mb-4">
                         <Image
-                            src="/lawyer-name.png"
+                            src="/lalesca-logo-1.png"
                             alt="Lalesca Moreira"
                             fill
                             className="object-contain object-center"

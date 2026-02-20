@@ -63,22 +63,22 @@ export default function CriminalDefense() {
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Title */}
                 <h2
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#B29671] font-normal text-center mb-[46px]"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-[#B29671] font-normal text-center mb-6 sm:mb-8 lg:mb-[46px]"
                     style={{ 
                         fontFamily: 'var(--font-abel), sans-serif',
-                        fontSize: '64px'
+                        fontSize: 'clamp(24px, 5vw, 64px)'
                     }}
                 >
-                    Defesa Criminal Estratégica e<br />
-                    Humanizada
+                    Defesa Criminal Estratégica e<br className="hidden sm:block" />
+                    <span className="sm:hidden"> </span>Humanizada
                 </h2>
 
                 {/* Description */}
                 <p
-                    className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#808080] font-normal leading-relaxed text-left max-w-5xl mx-auto"
+                    className="text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl text-[#808080] font-normal leading-relaxed text-left max-w-5xl mx-auto"
                     style={{ 
                         fontFamily: 'var(--font-abel), sans-serif',
-                        fontSize: '36px'
+                        fontSize: 'clamp(14px, 3vw, 36px)'
                     }}
                 >
                     {descriptionParts.map((part, index) => (

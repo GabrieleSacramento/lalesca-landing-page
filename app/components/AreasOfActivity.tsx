@@ -64,12 +64,12 @@ export default function AreasOfActivity() {
                     </div>
 
                     <h2
-                        className="text-4xl sm:text-5xl md:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
                         style={{
                             fontFamily: 'var(--font-abel), sans-serif',
-                            fontSize: '64px',
+                            fontSize: 'clamp(24px, 5vw, 64px)',
                             color: '#B29671',
-                            height: '64px'
+                            minHeight: 'clamp(30px, 5vw, 64px)'
                         }}
                     >
                         ÁREAS DE ATUAÇÃO
@@ -105,12 +105,12 @@ export default function AreasOfActivity() {
                             }}
                         >
                             <h3
-                                className="text-[#1E1919] font-normal mb-[12px] flex items-center"
+                                className="text-[#B29671] font-normal mb-[12px] flex items-center"
                                 style={{
                                     fontFamily: 'var(--font-archivo), sans-serif',
-                                    fontSize: '30px',
+                                    fontSize: 'clamp(18px, 2.5vw, 30px)',
                                     lineHeight: '23px',
-                                    height: '32px'
+                                    minHeight: 'clamp(20px, 2.5vw, 32px)'
                                 }}
                             >
                                 {area.title}
@@ -119,7 +119,7 @@ export default function AreasOfActivity() {
                                 className="text-[#808080] font-normal flex-1"
                                 style={{
                                     fontFamily: 'var(--font-abel), sans-serif',
-                                    fontSize: '24px',
+                                    fontSize: 'clamp(14px, 2vw, 24px)',
                                     lineHeight: '29px'
                                 }}
                             >

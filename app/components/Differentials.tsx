@@ -30,11 +30,11 @@ export default function Differentials() {
         {/* Main Title */}
         <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
           <h2
-            className="text-4xl sm:text-5xl md:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
             style={{
               fontFamily: 'var(--font-abel), sans-serif',
-              fontSize: '64px',
-              height: '64px'
+              fontSize: 'clamp(24px, 5vw, 64px)',
+              minHeight: 'clamp(30px, 5vw, 64px)'
             }}
           >
             <span style={{ color: '#B29671' }}>NOSSOS DIFERENCIAIS</span>
@@ -51,16 +51,16 @@ export default function Differentials() {
                 animationDelay: `${index * 0.1}s`,
                 animationFillMode: 'both',
                 borderRadius: '0',
-                boxShadow: '-6px 4px 4px rgba(178, 150, 113, 0.1)'
+                boxShadow: '-4px 4px 4px rgba(178, 150, 113, 0.1)'
               }}
             >
               <h3
                 className="text-[#1E1919] font-normal mb-[12px] flex items-center"
                 style={{
                   fontFamily: 'var(--font-archivo), sans-serif',
-                  fontSize: '30px',
+                  fontSize: 'clamp(18px, 2.5vw, 30px)',
                   lineHeight: '23px',
-                  height: '32px',
+                  minHeight: 'clamp(20px, 2.5vw, 32px)',
                   fontWeight: 600
                 }}
               >
@@ -70,7 +70,7 @@ export default function Differentials() {
                 className="text-[#808080] font-normal flex-1"
                 style={{
                   fontFamily: 'var(--font-abel), sans-serif',
-                  fontSize: '24px',
+                  fontSize: 'clamp(14px, 2vw, 24px)',
                   lineHeight: '29px'
                 }}
               >

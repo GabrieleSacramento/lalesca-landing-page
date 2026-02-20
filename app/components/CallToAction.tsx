@@ -22,10 +22,10 @@ export default function CallToAction() {
 
                     {/* Title */}
                     <h2
-                        className="mb-[24px] font-normal"
+                        className="mb-4 sm:mb-6 lg:mb-[24px] font-normal px-4"
                         style={{
                             fontFamily: 'var(--font-archivo), sans-serif',
-                            fontSize: '64px',
+                            fontSize: 'clamp(24px, 5vw, 64px)',
                             color: '#1F1919'
                         }}
                     >
@@ -34,10 +34,10 @@ export default function CallToAction() {
 
                     {/* Description */}
                     <p
-                        className="mb-8 sm:mb-10 md:mb-12 font-normal max-w-3xl mx-auto"
+                        className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 font-normal max-w-3xl mx-auto px-4"
                         style={{
                             fontFamily: 'var(--font-archivo), sans-serif',
-                            fontSize: '32px',
+                            fontSize: 'clamp(14px, 3vw, 32px)',
                             color: '#808080'
                         }}
                     >
@@ -49,10 +49,10 @@ export default function CallToAction() {
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center bg-[#BF9874] text-[#FFFFFF] whitespace-nowrap transition-opacity hover:opacity-90 active:opacity-75 px-8 py-4"
+                        className="inline-flex items-center justify-center bg-[#BF9874] text-[#FFFFFF] whitespace-nowrap transition-opacity hover:opacity-90 active:opacity-75 px-6 sm:px-8 py-3 sm:py-4"
                         style={{
                             fontFamily: 'var(--font-archivo), sans-serif',
-                            fontSize: '24px',
+                            fontSize: 'clamp(16px, 2vw, 24px)',
                             fontWeight: 600,
                             borderRadius: '8px'
                         }}

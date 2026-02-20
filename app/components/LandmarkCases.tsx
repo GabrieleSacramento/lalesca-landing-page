@@ -39,12 +39,12 @@ export default function LandmarkCases() {
                     </div>
 
                     <h2
-                        className="text-4xl sm:text-5xl md:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
                         style={{
                             fontFamily: 'var(--font-abel), sans-serif',
-                            fontSize: '64px',
+                            fontSize: 'clamp(24px, 5vw, 64px)',
                             color: '#B29671',
-                            height: '64px'
+                            minHeight: 'clamp(30px, 5vw, 64px)'
                         }}
                     >
                         CASOS DE REPERCUÇÃO
@@ -76,7 +76,7 @@ export default function LandmarkCases() {
                             {/* Interview Image */}
                             <div className="relative w-full aspect-[334/184]" style={{
                                 borderRadius: '0',
-                                boxShadow: '-6px 0px 4px rgba(178, 150, 113, 0.1)'
+                                boxShadow: '-4px 0px 4px rgba(178, 150, 113, 0.1)'
                             }}>
                                 <Image
                                     src={caseItem.image}
@@ -98,7 +98,7 @@ export default function LandmarkCases() {
                                     className="text-[#B29671] font-normal leading-relaxed"
                                     style={{
                                         fontFamily: 'var(--font-abel), sans-serif',
-                                        fontSize: '24px',
+                                        fontSize: 'clamp(14px, 2vw, 24px)',
                                         lineHeight: '29px'
                                     }}
                                 >

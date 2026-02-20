@@ -76,7 +76,7 @@ export default function Testimonials() {
                                     animationDelay: `${index * 0.1}s`,
                                     animationFillMode: 'both',
                                     borderRadius: '0',
-                                    boxShadow: '-6px 4px 4px rgba(178, 150, 113, 0.1)'
+                                    boxShadow: '-4px 4px 4px rgba(178, 150, 113, 0.1)'
                                 }}
                             >
                                 {/* Stars */}
@@ -100,7 +100,7 @@ export default function Testimonials() {
                                     className="text-[#B29671] font-normal leading-relaxed flex-1"
                                     style={{
                                         fontFamily: 'var(--font-abel), sans-serif',
-                                        fontSize: '24px',
+                                        fontSize: 'clamp(14px, 2vw, 24px)',
                                         lineHeight: '29px'
                                     }}
                                 >

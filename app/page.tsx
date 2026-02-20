@@ -1,6 +1,9 @@
+
 import Hero from './components/Hero';
 import Qualifications from './components/Qualifications';
+import CriminalDefense from './components/CriminalDefense';
 import AreasOfActivity from './components/AreasOfActivity';
+import CallToAction from './components/CallToAction';
 import Biography from './components/Biography';
 import LandmarkCases from './components/LandmarkCases';
 import Differentials from './components/Differentials';
@@ -14,10 +17,12 @@ export default function Home() {
       <main>
         <Hero />
         <Qualifications />
+        <CriminalDefense />
         <AreasOfActivity />
+        <CallToAction />
         <Biography />
-        <LandmarkCases />
         <Differentials />
+        <LandmarkCases />
         <Testimonials />
         <Contact />
       </main>

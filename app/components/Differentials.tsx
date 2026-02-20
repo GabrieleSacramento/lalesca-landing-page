@@ -1,4 +1,4 @@
-import Image from 'next/image';
+'use client';
 
 const differentials = [
   {
@@ -25,44 +25,54 @@ const differentials = [
 
 export default function Differentials() {
   return (
-    <section className="bg-[#FFFFFF] min-h-[880px] lg:h-[880px] py-12 sm:py-16 lg:py-24" id="diferenciais">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#FFFFFF] py-[64px]" id="diferenciais">
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Main Title */}
-        <div className="flex items-center justify-center mb-8 sm:mb-12">
-          <div className="w-full max-w-[300px] sm:max-w-[350px] lg:w-[418px] min-h-[60px] sm:min-h-[65px] lg:h-[72px] bg-[#B29671] rounded-lg flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6">
-            <Image
-              src="/Star.svg"
-              alt=""
-              width={32}
-              height={32}
-              className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain"
-            />
-            <h2
-              className="text-lg sm:text-xl lg:text-2xl text-[#FFFFFF] font-normal min-h-[28px] sm:min-h-[32px] lg:h-[36px] flex items-center"
-              style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
-            >
-              DIFERENCIAIS
-            </h2>
-          </div>
+        <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
+          <h2
+            className="text-4xl sm:text-5xl md:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
+            style={{
+              fontFamily: 'var(--font-abel), sans-serif',
+              fontSize: '64px',
+              height: '64px'
+            }}
+          >
+            <span style={{ color: '#B29671' }}>NOSSOS DIFERENCIAIS</span>
+          </h2>
         </div>
 
         {/* Differentials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-x-[144px] lg:gap-y-[44px] justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-x-[144px] lg:gap-y-[44px] justify-items-start">
           {differentials.map((differential, index) => (
             <div
               key={index}
-              className={`w-full max-w-[470px] min-h-[150px] sm:min-h-[170px] lg:h-[185px] bg-[#B29671] rounded-lg p-4 sm:p-6 flex flex-col ${index === 4 ? 'md:col-span-2 md:mx-auto' : ''
-                }`}
+              className={`w-full max-w-[550px] min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] bg-[#FFFFFF] p-4 sm:p-5 md:p-6 lg:p-8 flex flex-col animate-slide-in-right`}
+              style={{
+                animationDelay: `${index * 0.1}s`,
+                animationFillMode: 'both',
+                borderRadius: '0',
+                boxShadow: '-6px 4px 4px rgba(178, 150, 113, 0.1)'
+              }}
             >
               <h3
-                className="text-base sm:text-lg lg:text-xl text-[#1E1919] font-normal mb-2 sm:mb-3 min-h-[20px] sm:min-h-[24px] flex items-center"
-                style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                className="text-[#1E1919] font-normal mb-[12px] flex items-center"
+                style={{
+                  fontFamily: 'var(--font-archivo), sans-serif',
+                  fontSize: '30px',
+                  lineHeight: '23px',
+                  height: '32px',
+                  fontWeight: 600
+                }}
               >
                 {differential.title}
               </h3>
               <p
-                className="text-xs sm:text-sm lg:text-base text-[#FFFFFF] font-normal leading-relaxed flex-1"
-                style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                className="text-[#808080] font-normal flex-1"
+                style={{
+                  fontFamily: 'var(--font-abel), sans-serif',
+                  fontSize: '24px',
+                  lineHeight: '29px'
+                }}
               >
                 {differential.description}
               </p>

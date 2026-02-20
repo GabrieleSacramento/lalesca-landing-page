@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -42,7 +44,7 @@ const areas = [
 
 export default function AreasOfActivity() {
     return (
-        <section className="bg-[#B29671] py-10 sm:py-12 md:py-16 lg:py-24" id="areas">
+        <section className="bg-[#FFFFFF] py-[64px]" id="areas">
             <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Main Title */}
                 <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
@@ -54,12 +56,21 @@ export default function AreasOfActivity() {
                             width={107}
                             height={12}
                             className="object-contain w-full h-auto"
+                            style={{
+                                filter: 'brightness(0) saturate(100%) invert(67%) sepia(12%) saturate(1200%) hue-rotate(5deg) brightness(95%) contrast(90%)',
+                                color: '#B29671'
+                            }}
                         />
                     </div>
 
                     <h2
-                        className="text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[#FFFFFF] font-normal flex items-center text-center px-2 sm:px-4"
-                        style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                        className="text-4xl sm:text-5xl md:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
+                        style={{
+                            fontFamily: 'var(--font-abel), sans-serif',
+                            fontSize: '64px',
+                            color: '#B29671',
+                            height: '64px'
+                        }}
                     >
                         ÁREAS DE ATUAÇÃO
                     </h2>
@@ -72,6 +83,10 @@ export default function AreasOfActivity() {
                             width={107}
                             height={12}
                             className="object-contain w-full h-auto"
+                            style={{
+                                filter: 'brightness(0) saturate(100%) invert(67%) sepia(12%) saturate(1200%) hue-rotate(5deg) brightness(95%) contrast(90%)',
+                                color: '#B29671'
+                            }}
                         />
                     </div>
                 </div>
@@ -81,17 +96,32 @@ export default function AreasOfActivity() {
                     {areas.map((area, index) => (
                         <div
                             key={index}
-                            className="w-full max-w-[371px] min-h-[160px] sm:min-h-[180px] md:min-h-[220px] lg:h-[278px] bg-[#B29671] border border-[#FAE8D4] rounded-lg p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col"
+                            className="w-full max-w-[371px] min-h-[160px] sm:min-h-[180px] md:min-h-[220px] lg:h-[278px] bg-[#FFFFFF] p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col animate-slide-in-right"
+                            style={{
+                                animationDelay: `${index * 0.1}s`,
+                                animationFillMode: 'both',
+                                borderRadius: '0',
+                                boxShadow: '-4px 4px 4px rgba(0, 0, 0, 0.1)'
+                            }}
                         >
                             <h3
-                                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#1E1919] font-normal mb-1.5 sm:mb-2 md:mb-3 lg:mb-[12px] flex items-center"
-                                style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                                className="text-[#1E1919] font-normal mb-[12px] flex items-center"
+                                style={{
+                                    fontFamily: 'var(--font-archivo), sans-serif',
+                                    fontSize: '30px',
+                                    lineHeight: '23px',
+                                    height: '32px'
+                                }}
                             >
                                 {area.title}
                             </h3>
                             <p
-                                className="text-[11px] sm:text-xs md:text-sm lg:text-base text-[#FFFFFF] font-normal leading-relaxed flex-1"
-                                style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                                className="text-[#808080] font-normal flex-1"
+                                style={{
+                                    fontFamily: 'var(--font-abel), sans-serif',
+                                    fontSize: '24px',
+                                    lineHeight: '29px'
+                                }}
                             >
                                 {area.description}
                             </p>

@@ -20,7 +20,7 @@ const qualifications = [
 
 export default function Qualifications() {
     return (
-        <section className="bg-white min-h-[100px] lg:h-[100px] flex items-center py-6 lg:py-0">
+        <section className="bg-white min-h-[100px] lg:h-[100px] flex items-center py-[64px]">
             <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
                     {qualifications.map((qualification, index) => (

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 const cases = [
@@ -17,10 +19,10 @@ const cases = [
 
 export default function LandmarkCases() {
     return (
-        <section className="bg-[#B29671] min-h-[644px] lg:h-[644px] py-12 sm:py-16 lg:py-24" id="casos">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FFFFFF] py-[64px]" id="casos">
+            <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Main Title */}
-                <div className="flex items-center justify-center mb-6 sm:mb-8 lg:mb-[32px]">
+                <div className="flex items-center justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-[32px]">
                     {/* Left Arrow */}
                     <div className="hidden sm:flex w-[50px] sm:w-[80px] lg:w-[100px] mr-4 sm:mr-8 lg:mr-[144px] items-center">
                         <Image
@@ -29,12 +31,21 @@ export default function LandmarkCases() {
                             width={107}
                             height={12}
                             className="object-contain w-full h-auto"
+                            style={{
+                                filter: 'brightness(0) saturate(100%) invert(67%) sepia(12%) saturate(1200%) hue-rotate(5deg) brightness(95%) contrast(90%)',
+                                color: '#B29671'
+                            }}
                         />
                     </div>
 
                     <h2
-                        className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[#FFFFFF] font-normal min-h-[40px] sm:min-h-[50px] lg:h-[64px] flex items-center text-center px-4"
-                        style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                        className="text-4xl sm:text-5xl md:text-6xl font-normal flex items-center text-center px-2 sm:px-4"
+                        style={{
+                            fontFamily: 'var(--font-abel), sans-serif',
+                            fontSize: '64px',
+                            color: '#B29671',
+                            height: '64px'
+                        }}
                     >
                         CASOS DE REPERCUÇÃO
                     </h2>
@@ -47,16 +58,26 @@ export default function LandmarkCases() {
                             width={107}
                             height={12}
                             className="object-contain w-full h-auto"
+                            style={{
+                                filter: 'brightness(0) saturate(100%) invert(67%) sepia(12%) saturate(1200%) hue-rotate(5deg) brightness(95%) contrast(90%)',
+                                color: '#B29671'
+                            }}
                         />
                     </div>
                 </div>
 
                 {/* Cases Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-[42px] justify-items-center">
                     {cases.map((caseItem, index) => (
-                        <div key={index} className="flex flex-col w-full max-w-[334px]">
+                        <div key={index} className="flex flex-col w-full max-w-[334px] animate-slide-in-right" style={{
+                            animationDelay: `${index * 0.1}s`,
+                            animationFillMode: 'both'
+                        }}>
                             {/* Interview Image */}
-                            <div className="relative w-full aspect-[334/184]">
+                            <div className="relative w-full aspect-[334/184]" style={{
+                                borderRadius: '0',
+                                boxShadow: '-6px 0px 4px rgba(178, 150, 113, 0.1)'
+                            }}>
                                 <Image
                                     src={caseItem.image}
                                     alt={`Caso ${index + 1}`}
@@ -69,10 +90,17 @@ export default function LandmarkCases() {
                             </div>
 
                             {/* Description */}
-                            <div className="w-full aspect-[334/184] bg-[#FFFFFF] p-3 sm:p-4 flex items-center">
+                            <div className="w-full min-h-[184px] bg-[#FFFFFF] p-4 sm:p-5 md:p-6 flex items-start" style={{
+                                borderRadius: '0',
+                                boxShadow: '-6px 4px 4px rgba(178, 150, 113, 0.1)'
+                            }}>
                                 <p
-                                    className="text-xs sm:text-sm lg:text-base text-[#B29671] font-normal leading-relaxed"
-                                    style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                                    className="text-[#B29671] font-normal leading-relaxed"
+                                    style={{
+                                        fontFamily: 'var(--font-abel), sans-serif',
+                                        fontSize: '24px',
+                                        lineHeight: '29px'
+                                    }}
                                 >
                                     {caseItem.description}
                                 </p>

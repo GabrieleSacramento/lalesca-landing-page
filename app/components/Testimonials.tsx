@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 const whatsappNumber = '5571993072172';
@@ -15,8 +17,8 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="bg-[#B29671] py-16 lg:py-24">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#FFFFFF] py-[64px]">
+            <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                 {/* Top Section - Call to Action */}
                 <div className="mb-12 sm:mb-16 lg:mb-24">
                     <div className="bg-[#FFFFFF] rounded-lg p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto text-center">
@@ -49,7 +51,7 @@ export default function Testimonials() {
                     {/* Left Side - Title */}
                     <div className="flex flex-col">
                         <h3
-                            className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-[#FFFFFF] font-normal leading-tight mb-4"
+                            className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-[#B29671] font-normal leading-tight mb-4"
                             style={{ fontFamily: 'var(--font-marcellus), serif' }}
                         >
                             FEEDBACKS
@@ -58,9 +60,9 @@ export default function Testimonials() {
                         </h3>
                         {/* Decorative line with diamond */}
                         <div className="flex items-center gap-2">
-                            <div className="h-[1px] bg-[#FFFFFF] flex-1" />
-                            <div className="w-2 h-2 bg-[#FFFFFF] rounded-full" />
-                            <div className="h-[1px] bg-[#FFFFFF] flex-1" />
+                            <div className="h-[1px] bg-[#B29671] flex-1" />
+                            <div className="w-2 h-2 bg-[#B29671] rounded-full" />
+                            <div className="h-[1px] bg-[#B29671] flex-1" />
                         </div>
                     </div>
 
@@ -69,7 +71,13 @@ export default function Testimonials() {
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="border border-[#FAE8D4] rounded-lg p-4 sm:p-6 bg-transparent"
+                                className="bg-[#FFFFFF] p-4 sm:p-5 md:p-6 lg:p-8 flex flex-col animate-slide-in-right"
+                                style={{
+                                    animationDelay: `${index * 0.1}s`,
+                                    animationFillMode: 'both',
+                                    borderRadius: '0',
+                                    boxShadow: '-6px 4px 4px rgba(178, 150, 113, 0.1)'
+                                }}
                             >
                                 {/* Stars */}
                                 <div className="flex gap-1 mb-3 sm:mb-4">
@@ -81,13 +89,20 @@ export default function Testimonials() {
                                             width={16}
                                             height={16}
                                             className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
+                                            style={{
+                                                filter: 'brightness(0) saturate(100%) invert(67%) sepia(12%) saturate(1200%) hue-rotate(5deg) brightness(95%) contrast(90%)'
+                                            }}
                                         />
                                     ))}
                                 </div>
                                 {/* Testimonial Text */}
                                 <p
-                                    className="text-xs sm:text-sm lg:text-base text-[#FFFFFF] font-normal leading-relaxed"
-                                    style={{ fontFamily: 'var(--font-archivo), sans-serif' }}
+                                    className="text-[#B29671] font-normal leading-relaxed flex-1"
+                                    style={{
+                                        fontFamily: 'var(--font-abel), sans-serif',
+                                        fontSize: '24px',
+                                        lineHeight: '29px'
+                                    }}
                                 >
                                     {testimonial.text}
                                 </p>

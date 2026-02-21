@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const whatsappNumber = '5571993072172';
-const whatsappMessage = 'Estou vindo da sua landing page, quenga';
+const whatsappMessage = 'Olá, Dra. Lalesca! Encontrei seu contato através do seu site. Preciso de assistência jurídica criminal e gostaria de saber se a senhora poderia me ajudar.';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 const areas = [

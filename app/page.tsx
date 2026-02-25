@@ -8,7 +8,6 @@ import Biography from './components/Biography';
 import LandmarkCases from './components/LandmarkCases';
 import Differentials from './components/Differentials';
 import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
         <Differentials />
         <LandmarkCases />
         <Testimonials />
-        <Contact />
       </main>
       <Footer />
     </div>

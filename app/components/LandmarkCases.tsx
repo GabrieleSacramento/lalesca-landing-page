@@ -11,10 +11,12 @@ const cases = [
     {
         image: '/enterview-two.png',
         description: 'A atuação em sede de assistente de acusação na defesa da vítima, que foi atropelada por um motorista que estava embriagado em alta velocidade. Sendo esse um caso de grande na capital Salvador.',
+        link: 'https://www.instagram.com/p/DTgKV38D5z0/',
     },
     {
         image: '/enterview-three.png',
         description: 'Parecer jurídico sobre esse caso em que uma turista cometeu racismo com uma trabalhadora no centro histórico de Salvador.',
+        link: 'https://www.instagram.com/p/DT5i_6rEfix/',
     },
 ];
 
@@ -143,12 +145,12 @@ export default function LandmarkCases() {
                             </div>
 
                             {/* Description */}
-                            <div className="w-full min-h-[184px] bg-[#FFFFFF] p-4 sm:p-5 md:p-6 flex items-start" style={{
+                            <div className="w-full min-h-[184px] bg-[#FFFFFF] p-4 sm:p-5 md:p-6 flex flex-col items-start" style={{
                                 borderRadius: '0',
                                 boxShadow: '-6px 4px 4px rgba(178, 150, 113, 0.1)'
                             }}>
                                 <p
-                                    className="text-[#B29671] font-normal leading-relaxed"
+                                    className={`text-[#B29671] font-normal leading-relaxed ${index !== 0 ? 'mb-3 sm:mb-4' : ''}`}
                                     style={{
                                         fontFamily: 'var(--font-abel), sans-serif',
                                         fontSize: 'clamp(13px, 2vw, 24px)',
@@ -157,6 +159,44 @@ export default function LandmarkCases() {
                                 >
                                     {caseItem.description}
                                 </p>
+                                {index !== 0 && (
+                                    caseItem.link ? (
+                                        <button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                window.open(caseItem.link, '_blank', 'noopener,noreferrer');
+                                            }}
+                                            className="text-[#B29671] font-normal hover:opacity-80 transition-opacity cursor-pointer inline-block text-left"
+                                            style={{
+                                                fontFamily: 'var(--font-abel), sans-serif',
+                                                fontSize: 'clamp(13px, 2vw, 24px)',
+                                                lineHeight: '29px',
+                                                textDecoration: 'underline',
+                                                position: 'relative',
+                                                zIndex: 10,
+                                                pointerEvents: 'auto',
+                                                background: 'none',
+                                                border: 'none',
+                                                padding: 0
+                                            }}
+                                        >
+                                            Saiba mais
+                                        </button>
+                                    ) : (
+                                        <button
+                                            className="text-[#B29671] font-normal hover:opacity-80 transition-opacity cursor-pointer"
+                                            style={{
+                                                fontFamily: 'var(--font-abel), sans-serif',
+                                                fontSize: 'clamp(13px, 2vw, 24px)',
+                                                lineHeight: '29px',
+                                                textDecoration: 'underline'
+                                            }}
+                                        >
+                                            Saiba mais
+                                        </button>
+                                    )
+                                )}
                             </div>
                         </div>
                     ))}
